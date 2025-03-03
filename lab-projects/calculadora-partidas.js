@@ -10,6 +10,7 @@ Se vitórias for entre 91 e 100= Lendário
 Se vitórias for maior ou igual a 101 = Imortal */
 
 const readlineSync = require("readline-sync");
+console.log("=== Calculadora de Partidas Rankeadas ===");
 
 let vitorias = parseInt(
   readlineSync.question("Insira a quantidade de vitórias do jogador: ")
@@ -41,6 +42,5 @@ function verificarRanking(vitorias, derrotas) {
     `O Herói tem de saldo de ${saldoRankeadas} está no nível de ${ranking}`
   );
 }
-
 
 verificarRanking(vitorias, derrotas);

@@ -1,4 +1,4 @@
-/* 01) Crie uma variável para armazenar o nome e a quantidade de experiência (XP) de um herói, depois utilize uma estrutura de decisão para apresentar alguma das mensagens abaixo:
+/* Crie uma variável para armazenar o nome e a quantidade de experiência (XP) de um herói, depois utilize uma estrutura de decisão para apresentar alguma das mensagens abaixo:
 
 Se XP for menor do que 1.000 = Ferro
 Se XP for entre 1.001 e 2.000 = Bronze
@@ -11,26 +11,28 @@ Se XP for maior ou igual a 10.001 = Radiante */
 
 const readlineSync = require("readline-sync");
 
-let heroName = readlineSync.question("Nome do herói: ");
-let heroXP = parseInt(readlineSync.question("XP do herói: "));
-let heroLevel = "";
+console.log("=== Classificador de Nível de Herói ===");
 
-if (heroXP <= 1000) {
-  heroLevel = "Ferro";
-} else if ( heroXP <= 2000) {
-  heroLevel = "Bronze";
-} else if (heroXP <= 5000) {
-  heroLevel = "Prata";
-} else if (heroXP <= 7000) {
-  heroLevel = "Ouro";
-} else if (heroXP <= 8000) {
-  heroLevel = "Platina";
-} else if (heroXP <= 9000) {
-  heroLevel = "Ascendente";
-} else if (heroXP <= 10000) {
-  heroLevel = "Imortal";
+let nomeHeroi = readlineSync.question("Nome do herói: ");
+let xpHeroi = parseInt(readlineSync.question("XP do herói: "));
+let nivelHeroi = "";
+
+if (xpHeroi <= 1000) {
+  nivelHeroi = "Ferro";
+} else if (xpHeroi <= 2000) {
+  nivelHeroi = "Bronze";
+} else if (xpHeroi <= 5000) {
+  nivelHeroi = "Prata";
+} else if (xpHeroi <= 7000) {
+  nivelHeroi = "Ouro";
+} else if (xpHeroi <= 8000) {
+  nivelHeroi = "Platina";
+} else if (xpHeroi <= 9000) {
+  nivelHeroi = "Ascendente";
+} else if (xpHeroi <= 10000) {
+  nivelHeroi = "Imortal";
 } else {
-    heroLevel = "Radiante";
+  nivelHeroi = "Radiante";
 }
 
-console.log(`O herói ${heroName} está no nível ${heroLevel}.`);
+console.log(`O herói ${nomeHeroi} está no nível ${nivelHeroi}.`);
